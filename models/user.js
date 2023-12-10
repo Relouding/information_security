@@ -9,7 +9,7 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false,
             unique: true
         },
-        studentid: {
+        ssn: {
             type: Sequelize.DataTypes.STRING,
             allowNull: false,
             unique: true

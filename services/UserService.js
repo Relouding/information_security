@@ -3,14 +3,14 @@ class UserService {
         this.client = db.sequelize;
         this.User = db.User;
     }
-    async create(fullName, username, password, email, studentid, gender, religion, role) {
+    async create(fullName, username, password, email, ssn, gender, religion, role) {
         try{
             const newUser = await this.User.create({
                 fullName: fullName,
                 username: username,
                 password: password,
                 email: email,
-                studentid: studentid,
+                ssn: ssn,
                 gender: gender,
                 religion: religion,
                 role: role

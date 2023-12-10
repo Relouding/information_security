@@ -62,7 +62,7 @@ router.get('/signup', function(req, res, next) {
 router.post('/signup', async function(req, res, next) {
   const fullName = `${req.body.firstname} ${req.body.lastname}`;
   try{
-    await userService.create(fullName, req.body.username, req.body.password, req.body.email, req.body.studentid, req.body.gender, req.body.religion, "student");
+    await userService.create(fullName, req.body.username, req.body.password, req.body.email, req.body.ssn, req.body.gender, req.body.religion, "student");
     res.redirect('/login');
   }catch(error){
     // checks if there are more users with the same username.
