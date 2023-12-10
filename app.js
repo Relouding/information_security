@@ -15,6 +15,7 @@ var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
 var clubsRouter = require('./routes/clubs');
 var userRouter = require('./routes/user');
+var adminRouter = require('./routes/admin');
 
 db.sequelize.sync({ force: false }).then(() =>{
   require('./services/PopulationService.js');
@@ -44,6 +45,7 @@ app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/clubs', clubsRouter);
 app.use('/user', userRouter);
+app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

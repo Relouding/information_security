@@ -11,6 +11,7 @@ module.exports = {
         }
         return next();
     },
+    
     isAdmin: function(req, res, next) {
         if(typeof req.user != 'undefined'){
             if(req.user.role === "admin") {

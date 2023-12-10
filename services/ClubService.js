@@ -26,6 +26,22 @@ class ClubService {
         }
     }
 
+    //Admin adds a new club
+    async addClub(clubName, clubDescription, dateCreated) {
+        await this.client.query(
+            'INSERT INTO clubs (Name, Description, ClubCreatedDate) VALUES ("' + clubName + '", "' + clubDescription + '", "' + dateCreated + '");'
+        );
+        return;
+    }
+
+    //Admin deletes a club
+    async deleteClub(clubId) {
+        return this.Club.destroy({
+            where: { id: clubId },
+            raw: true
+        })
+    }
+
     //Get club Details
     async getClubDetails(clubId) {
         const club = await this.client.query('SELECT * FROM Clubs where id = ' + clubId, {

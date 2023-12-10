@@ -21,12 +21,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/clubs/myclubs">My Clubs</a>
                         </li>
+                        <% if (user.role === 'admin') {%>
                         <li class="nav-item">
-                            
+                            <a class="nav-link" href="/admin">Maintenance</a>
+                        </li>
+                        <% } %>
+                        <li class="nav-item">
                             <form action="/user/<%= user.id %>" method="get">
                                 <button class="nav-link" style="background-color: transparent; border: none;" type="submit">My Profile</button>
                               </form>
                         </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="/logout"><%= user.username %> Logout</a>
                         </li>
