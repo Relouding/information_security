@@ -29,9 +29,9 @@ If you are unsure of any instructions for the course assignment, contact out to 
 4. Navigate you browser to *http://localhost:3000*
 
 # Environment Variables
-ADMIN_USERNAME = "dabcaowner"  
-ADMIN_PASSWORD = "dabca1234"  
-DATABASE_NAME = "adoptiondb"  
+ADMIN_USERNAME = "isccaowner"  
+ADMIN_PASSWORD = "iscca1234"  
+DATABASE_NAME = "clubdb"  
 DIALECT = "mysql"  
 DIALECTMODEL = "mysql2"  
 PORT = "3000"  
@@ -62,8 +62,8 @@ Node.js v18.17.1
 CREATE DATABASE clubdb;
 
 # DATABASEACCESS
-CREATE USER IF NOT EXISTS 'dabcaowner'@'localhost' IDENTIFIED BY 'dabca1234';  
-GRANT ALL PRIVILEGES ON adoptiondb.* TO 'dabcaowner'@'localhost';
+CREATE USER IF NOT EXISTS 'isccaowner'@'localhost' IDENTIFIED BY 'iscca1234';  
+GRANT ALL PRIVILEGES ON clubdb.* TO 'isccaowner'@'localhost';
 
 # REFERENCES
 Friends Vectors by Vecteezy: https://www.vecteezy.com/free-vector/friends
